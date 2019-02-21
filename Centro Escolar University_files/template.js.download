@@ -1,0 +1,119 @@
+$(document).ready(function(){
+	$('.social-img').hover(function(){
+		$(this).popover('toggle');
+	});
+
+	$('#animated-banner').revolution({
+		delay:8000,
+		startwidth:1170,
+		onHoverStop:"on",
+		startheight:432,
+		hideThumbs:"off",
+		fullWidth:"on",
+		forceFullWidth:"on"
+	});
+
+	$(".fancybox").fancybox();
+
+	//registration
+	$('.membership-area .description, .membership-area label').html('');
+	$('#edit-name').attr("placeholder", "*Username.");
+	$('#edit-mail').attr("placeholder", "*Email.");
+	$('#edit-pass').attr("placeholder", "*Password");
+	$('#edit-pass-pass1').attr("placeholder", "*Password");
+	$('#edit-pass-pass2').attr("placeholder", "*Re-Type Password");
+	$('#user-register-form #edit-submit').attr("value", "Sign Up");
+	$('#edit-field-name-und-0-value').attr("placeholder", "*Name");
+	$('.password-field').after($('.password-strength'));
+	$('select[id=edit-field-school-colleges-und] > option:first-child').text('School / Colleges');
+	/*$('#user-register-form .item-list h3').text('or');*/
+	$('#user-register-form .hybridauth-widget-wrapper .item-list h3').wrapInner( '<span></span>' );
+	$('#user-login .hybridauth-widget-wrapper .item-list h3').wrapInner( '<span></span>' );
+
+	$('#edit-fullname').attr("placeholder", "Name*");
+	$('#edit-email').attr("placeholder", "Email*");
+	$("#edit-fileattach").attr("name", "fileAttach");
+	$('a[href="#multiple-links"]').click(function(){
+		var contID = $(this).attr('href');
+		$('ul'+contID+'').stop().slideToggle('fast');
+		return false;
+	});
+
+	$('#mobile-menu-sidr').mmenu({
+		extensions: ["theme-light"],
+		offCanvas: {
+			position  : 'left',
+			zposition :	'front',
+		}
+	});
+
+	$('.mobile-menu-trigger').click(function(){
+		$('#mobile-menu-sidr').trigger('open.mm');
+	});
+
+	$(window).resize(function(){
+		$('#mobile-menu-sidr').trigger('close.mm');
+	});
+});
+
+$(window).load(function(){
+
+/*
+	if($(window).outerWidth() <= 480){
+		if(imageBanner_height > 0){
+			imageBanner_height = 200;
+		}
+	}
+*/
+
+	var imageBanner_height = $('#image-banner img').height();
+	var imageBanner_url = $('#image-banner img').attr('src');
+
+	$('#image-banner').css({
+		'height': imageBanner_height+'px',
+		'background': 'url('+imageBanner_url+') center center no-repeat',
+		'background-size': 'cover'
+	});
+	$('#image-banner .banner-name').css({
+		'height': imageBanner_height+'px',
+	});
+
+	$('#image-banner img').css({'display':'none'});
+
+	$('.quicklinks-cover .quicklink-title').css({ 'height': '100%' });
+	var quiclinkTitle = $('.quicklinks-cover .quicklink-title').height();
+	var quiclinkTitleWidth = $('.quicklinks-cover .quicklink-title > div').innerWidth() - 10;
+	$('.quicklinks-cover .quicklink-title .quicklink-title-cont').css({
+		'height': quiclinkTitle+'px',
+		'width': quiclinkTitleWidth+'px'
+	});
+
+	var quickIconHeight = $('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont').height();
+	var quickIconWidth = $('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont').width();
+	$('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont .quicklink-icon').css({
+		'height': quickIconHeight+'px',
+		'width': quickIconWidth+'px'
+	});
+	$('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont .quicklink-icon img').css({
+		'max-width': quickIconWidth+'px'
+	});
+
+	$(window).resize(function(){
+		var quiclinkTitle = $('.quicklinks-cover .quicklink-title').height();
+		var quiclinkTitleWidth = $('.quicklinks-cover .quicklink-title > div').innerWidth() - 10;
+		$('.quicklinks-cover .quicklink-title .quicklink-title-cont').css({
+			'height': quiclinkTitle+'px',
+			'width': quiclinkTitleWidth+'px'
+		});
+
+		var quickIconHeight = $('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont').height();
+		var quickIconWidth = $('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont').width();
+		$('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont .quicklink-icon').css({
+			'height': quickIconHeight+'px',
+			'width': quickIconWidth+'px'
+		});
+		$('#side-quicklinks .quicklinks .quicklinks-cover .quicklinks-icon-cont .quicklink-icon img').css({
+			'max-width': quickIconWidth+'px'
+		});
+	});
+});
