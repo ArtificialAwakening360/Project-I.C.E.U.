@@ -8,12 +8,49 @@
 	background-color: white;
 	border: 1px solid gray;
 	text-align: center;
-	border-radius: 100%;  
+	border-radius: 100%;
+	transition: 0.3s;  
 }
-.icon-image{
-	position: relative;
-	width: 100px;
-	margin: 5px auto; 
+.monika-icon img{
+	width: 95px;
+	margin: 10px auto;
+}
+.img-1{
+	display: block;
+}
+.img-2{
+	display: none;
+}
+.monika-icon:hover .img-1{
+	display: none;
+}
+.monika-icon:hover .img-2{
+	display: block;
+	width: 150px;
+	-webkit-animation: bounce 5s;
+	animation: bounce 5s;
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+@-webkit-keyframes bounce {
+from 23% to 53%{
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+}
+@keyframes bounce {
+from 23% to 53%{
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
 }
 .monika-icon .icon-label{
 	font-size: 18px;
