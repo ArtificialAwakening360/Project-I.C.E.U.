@@ -1,0 +1,27 @@
+.monika-icon{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 999;
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 1px solid gray;
+	text-align: center;
+	border-radius: 100%;  
+}
+.icon-image{
+	position: relative;
+	width: 100px;
+	margin: 5px auto; 
+}
+.monika-icon .icon-label{
+	font-size: 18px;
+	text-align: center;
+	display: block;
+	font-family: "Helvetica";
+}
+.monika-icon:hover{
+	background-color: pink;
+	cursor: pointer;
+}
