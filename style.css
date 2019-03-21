@@ -27,30 +27,6 @@
 .monika-icon:hover .img-2{
 	display: block;
 	width: 150px;
-	-webkit-animation: bounce 5s;
-	animation: bounce 5s;
-}
-.bounce {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-}
-@-webkit-keyframes bounce {
-from 23% to 53%{
-	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-}
-@keyframes bounce {
-from 23% to 53%{
-	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
 }
 .monika-icon .icon-label{
 	font-size: 18px;
