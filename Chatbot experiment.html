@@ -6,18 +6,27 @@
 		<link rel="stylesheet" href="animate.css">
 	</head>
 	<body>
-		<iframe 
-			 class="frame"
-  			 allow="microphone;"
- 			 width="350"
- 			 height="430"
- 			 align="right"			 
- 			 src="https://console.dialogflow.com/api-client/demo/embedded/4f42c0c6-45b1-4b1c-bc44-782f75881ab7">
-			</iframe>
-		<button class="monika-icon">
+		<iframe id="bot" class="frame" allow="microphone;" width="350" height="430" align="right" src="https://console.dialogflow.com/api-client/demo/embedded/4f42c0c6-45b1-4b1c-bc44-782f75881ab7">
+		</iframe>
+		<button class="monika-icon" onclick="startBot()">
 			<img class="img-1" src="monika-chibi.png">
-			<img class="img-2" src="monika-chibi-jump.png">
+			<img class="img-2 animated bounce" src="monika-chibi-jump.png">
 			<label class="icon-label">Monika</label>	
 		</button>
+
+		<script>
+			let toggleBot = false;
+
+			let startBot = function(){
+				if(toggleBot){
+					document.getElementById("bot").style.display = "none";
+					toggleBot = false;
+				}
+				else{
+					document.getElementById("bot").style.display = "block";
+					toggleBot = true;
+				}
+			};
+		</script>
 	</body>
 </html>

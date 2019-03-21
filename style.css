@@ -38,3 +38,6 @@
 	background-color: pink;
 	cursor: pointer;
 }
+.frame{
+	display: none;
+}
