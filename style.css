@@ -21,6 +21,9 @@
 .img-2{
 	display: none;
 }
+.img-3{
+	display:block;
+}
 .monika-icon:hover .img-1{
 	display: none;
 }
